@@ -48,7 +48,13 @@ public class MethodsPractice {
     //TODO: Write a method named countOdds(start, end) that returns an integer containing the integer that is the count of all odd numbers between the start and the end input integers.
 
     public static int countOdds(int start, int end) {
-
+        int count = 0;
+        for (int i = start; i < end; i += 1) {
+            if (i % 2 != 0) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {
@@ -63,9 +69,10 @@ public class MethodsPractice {
 //        System.out.println(isEven(3));
 //        System.out.println(isEven(4));
 
-        System.out.println(isOdd(4));
-        System.out.println(isOdd(3));
+//        System.out.println(isOdd(4));
+//        System.out.println(isOdd(3));
 
+        System.out.println(countOdds(1, 10));
 
     }
 }
