@@ -50,11 +50,59 @@ public class MethodsPractice {
     public static int countOdds(int start, int end) {
         int count = 0;
         for (int i = start; i < end; i += 1) {
-            if (i % 2 != 0) {
+            if (isEven(i)) {
                 count++;
             }
         }
         return count;
+    }
+
+    //TODO: Write a method named countEvens(start, end) that returns an integer containing the integer that is the count of all even numbers between the start and the end input integers.
+
+    public static int countEvens(int start, int end) {
+        int count = 0;
+        for (int i = start; i < end; i += 1) {
+            if (isOdd(i)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    //TODO: Write a method named isVowel() that accepts a String input of length 1 and returns a boolean if that string is a vowel other than "y"
+
+    public static boolean isVowel(String vowel) {
+        String vowelList = "aeiouAEIOU";
+        return vowelList.contains(vowel);
+    }
+
+    //TODO: Write a method named hasVowels() that accepts a string of any length and returns a boolean if there are any vowels in that string.
+
+    public static boolean hasVowels(String str) {
+        String vowelList = "aeiouAEIOU";
+        for (int i = 0; i < str.length(); i += 1) {
+            if (str.charAt(i) == vowelList.charAt(i))
+                return true;
+        }
+        return false;
+    }
+
+    //TODO: Write a method named countVowels() that accepts a string of any length and returns an integer count of the number of vowels in the provided input String.
+
+    public static int countVowels(String str) {
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i += 1) {
+            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u')
+                count++;
+        }
+        return count;
+    }
+
+    //TODO: Write a method named isPrime() that that accepts in an integer number and returns a boolean if the number is evenly divisible only by either 1 or the number itself.
+
+    public static boolean isPrime(int x) {
+
     }
 
     public static void main(String[] args) {
@@ -72,7 +120,18 @@ public class MethodsPractice {
 //        System.out.println(isOdd(4));
 //        System.out.println(isOdd(3));
 
-        System.out.println(countOdds(1, 10));
+//        System.out.println(countOdds(1, 10));
+//        System.out.println(countEvens(1, 10));
 
+//        System.out.println(isVowel("a"));
+//        System.out.println(isVowel("e"));
+//        System.out.println(isVowel("t"));
+//        System.out.println(isVowel("y"));
+
+//        System.out.println(hasVowels("carlos"));
+//        System.out.println(hasVowels("bbb"));
+
+        System.out.println(countVowels("carlos"));
+        System.out.println(countVowels("ttt"));
     }
 }
